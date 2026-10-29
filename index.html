@@ -8,9 +8,18 @@
 <meta property="og:title" content="Olya Haydamaka · Open tools for artists">
 <meta property="og:description" content="Free, open-source tools for artists. They run in the browser, need no account, and never upload your work.">
 <link rel="icon" href="tulip.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+/* Fonts are served from this site (fonts/, SIL Open Font License): the page asks nothing of other sites. Latin and Cyrillic, each loaded only when the page uses it. */
+@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/cormorant-garamond-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/cormorant-garamond-cyrillic-400-normal.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/cormorant-garamond-latin-500-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/cormorant-garamond-cyrillic-500-normal.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:400;font-display:swap;src:url(fonts/cormorant-garamond-latin-400-italic.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:400;font-display:swap;src:url(fonts/cormorant-garamond-cyrillic-400-italic.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"JetBrains Mono";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/jetbrains-mono-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"JetBrains Mono";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/jetbrains-mono-cyrillic-400-normal.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"JetBrains Mono";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/jetbrains-mono-latin-500-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"JetBrains Mono";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/jetbrains-mono-cyrillic-500-normal.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
 :root{--bg:#f8f5f0;--line:#ddd3c5;--ink:#2B241D;--dark:#5B4E3E;--taupe:#8A7862;--terra:#B5533A}
 *{box-sizing:border-box}
 html{background:var(--bg)}
@@ -67,7 +76,7 @@ footer .sp{flex:1}
 <h2 data-t="how">How they're made</h2>
 <ul class="pr">
 <li><b data-t="p1">Free</b><span data-t="p1d">MIT licence. Use them for personal or commercial work.</span></li>
-<li><b data-t="p2">Private</b><span data-t="p2d">Your files stay on your computer. Nothing is uploaded or stored.</span></li>
+<li><b data-t="p2">Private</b><span data-t="p2d">Your files stay on your computer. Nothing is uploaded; what a tool keeps stays in your browser.</span></li>
 <li><b data-t="p3">Simple</b><span data-t="p3d">One task per tool, no sign-up, works on any desktop browser.</span></li>
 </ul>
 </section>
@@ -76,11 +85,12 @@ footer .sp{flex:1}
 </footer>
 </div>
 <script>
-const L={en:{},uk:{name:'Оля Гайдамака',h1:'Відкриті інструменти <em>для митців</em>',lede:'Невеликі безкоштовні інструменти для практичного боку мистецтва: від підготовки принтів до передачі робіт у друкарню. Вони працюють у браузері, не потребують акаунта й ніколи не завантажують ваші роботи.',tools:'Інструменти',t1:'Листівки',open:'Відкрити',source:'Код',t1d:'Розміщуйте картини на лицьовому боці й звороті листівок, перевіряйте виліт, обріз і роздільність та експортуйте готові до друку TIFF 300 dpi для друкарні.',browser:'Працює в браузері',soon:'Нові інструменти з’являтимуться тут.',how:'Принципи',p1:'Безкоштовно',p1d:'Ліцензія MIT. Використовуйте для особистої чи комерційної роботи.',p2:'Приватно',p2d:'Файли лишаються на вашому комп’ютері. Нічого не завантажується й не зберігається.',p3:'Просто',p3d:'Одне завдання — один інструмент, без реєстрації, працює в будь-якому браузері на комп’ютері.',issues:'Ідеї чи помилки? <a href="https://github.com/olya-haydamaka/postcard-fronts/issues">Створіть issue</a>'}};
+const L={en:{},uk:{name:'Оля Гайдамака',h1:'Відкриті інструменти <em>для митців</em>',lede:'Невеликі безкоштовні інструменти для практичного боку мистецтва: від підготовки принтів до передачі робіт у друкарню. Вони працюють у браузері, не потребують акаунта й ніколи не завантажують ваші роботи.',tools:'Інструменти',t1:'Листівки',open:'Відкрити',source:'Код',t1d:'Розміщуйте картини на лицьовому боці й звороті листівок, перевіряйте виліт, обріз і роздільність та експортуйте готові до друку TIFF 300 dpi для друкарні.',browser:'Працює в браузері',soon:'Нові інструменти з’являтимуться тут.',how:'Принципи',p1:'Безкоштовно',p1d:'Ліцензія MIT. Використовуйте для особистої чи комерційної роботи.',p2:'Приватно',p2d:'Файли лишаються на вашому комп’ютері. Нічого не надсилається, а збережене лишається у вашому браузері.',p3:'Просто',p3d:'Одне завдання — один інструмент, без реєстрації, працює в будь-якому браузері на комп’ютері.',issues:'Ідеї чи помилки? <a href="https://github.com/olya-haydamaka/postcard-fronts/issues">Створіть issue</a>'}};
 document.querySelectorAll('[data-t]').forEach(e=>L.en[e.dataset.t]=e.innerHTML);
 function set(l){document.documentElement.lang=l;document.querySelectorAll('[data-t]').forEach(e=>{const v=L[l][e.dataset.t]??L.en[e.dataset.t];e.innerHTML=v});document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.l===l));try{localStorage.setItem('oh-lang',l)}catch(e){}}
 document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>set(b.dataset.l));
-let l0='en';try{l0=localStorage.getItem('oh-lang')||((navigator.language||'').startsWith('uk')?'uk':'en')}catch(e){}
+// English unless the visitor chose Ukrainian here before; never guessed from the browser.
+let l0='en';try{if(localStorage.getItem('oh-lang')==='uk')l0='uk'}catch(e){}
 set(l0);
 </script>
 </body>
