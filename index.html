@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Olya Haydamaka · Open tools for artists</title>
+<meta name="description" content="Free, open-source tools for artists. They run in the browser, need no account, and never upload your work.">
+<meta property="og:title" content="Olya Haydamaka · Open tools for artists">
+<meta property="og:description" content="Free, open-source tools for artists. They run in the browser, need no account, and never upload your work.">
+<link rel="icon" href="tulip.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f8f5f0;--line:#ddd3c5;--ink:#2B241D;--dark:#5B4E3E;--taupe:#8A7862;--terra:#B5533A}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;color:var(--dark);font:400 14px/1.6 "JetBrains Mono",ui-monospace,monospace}
+a{color:var(--terra);text-decoration:none;border-bottom:1px solid currentColor}a:hover{color:var(--ink)}
+.wrap{max-width:760px;margin:0 auto;padding:72px 28px 48px;display:flex;flex-direction:column;gap:72px}
+header{display:flex;flex-direction:column;gap:22px}
+.mark{display:flex;align-items:center;gap:14px}
+.mark img{width:18px;height:29px}
+.mark span{font:500 13px/1 "JetBrains Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--dark)}
+.lang{margin-left:auto;display:flex;gap:2px}
+.lang button{font:500 11px/1 "JetBrains Mono",monospace;padding:6px 8px;border:1px solid var(--line);background:none;color:var(--taupe);cursor:pointer}
+.lang button.on{border-color:var(--dark);color:var(--ink)}
+h1{margin:0;font:400 clamp(40px,7vw,64px)/1.02 "Cormorant Garamond",Georgia,serif;color:var(--ink);letter-spacing:-.01em;text-wrap:balance}
+h1 em{font-style:italic;color:var(--terra)}
+.lede{margin:0;max-width:560px;font:400 20px/1.5 "Cormorant Garamond",Georgia,serif;color:var(--dark);text-wrap:pretty}
+h2{margin:0 0 18px;font:500 11px/1 "JetBrains Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--taupe)}
+.tool{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px 24px;padding:24px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tool h3{margin:0;font:500 30px/1.1 "Cormorant Garamond",serif;color:var(--ink)}
+.tool p{margin:0;grid-column:1/-1;max-width:580px;text-wrap:pretty}
+.tool .meta{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px 18px;font-size:12px;color:var(--taupe)}
+.tool .links{display:flex;gap:10px;align-items:start;grid-row:1;grid-column:2}
+.btn{display:inline-flex;align-items:center;white-space:nowrap;font:500 12px/1 "JetBrains Mono",monospace;padding:10px 14px;border:1px solid var(--dark);color:var(--ink)}
+.btn:hover{background:var(--dark);color:#fff}
+.btn.pri{background:var(--dark);color:#fff}.btn.pri:hover{background:var(--ink)}
+.soon{margin:18px 0 0;color:var(--taupe);font-size:12.5px}
+ul.pr{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px}
+ul.pr li{display:flex;flex-direction:column;gap:6px}
+ul.pr b{font:500 22px/1.15 "Cormorant Garamond",serif;color:var(--ink)}
+ul.pr span{text-wrap:pretty}
+footer{display:flex;flex-wrap:wrap;gap:10px 24px;padding-top:24px;border-top:1px solid var(--line);font-size:12px;color:var(--taupe)}
+footer .sp{flex:1}
+@media (max-width:560px){.wrap{padding-top:40px;gap:56px}.tool{grid-template-columns:1fr}.tool .links{grid-row:auto;grid-column:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="mark"><img src="tulip.svg" alt=""><span data-t="name">Olya Haydamaka</span><div class="lang"><button data-l="en">EN</button><button data-l="uk">UK</button></div></div>
+<h1 data-t="h1" data-html>Open tools <em>for artists</em></h1>
+<p class="lede" data-t="lede">Small, free tools for the practical side of making art, from preparing prints to getting work ready for a studio. They run in your browser, need no account, and never upload your work.</p>
+</header>
+<section>
+<h2 data-t="tools">Tools</h2>
+<article class="tool">
+<h3 data-t="t1">Postcard fronts</h3>
+<div class="links"><a class="btn pri" href="https://postcards.haydamaka.com/" data-t="open">Open tool</a><a class="btn" href="https://github.com/olya-haydamaka/postcard-fronts" data-t="source">Source</a></div>
+<p data-t="t1d">Place paintings on postcard fronts and backs, check bleed, trim and resolution, and export print-ready 300 dpi TIFF files for the print studio.</p>
+<div class="meta"><span>TypeScript</span><span>MIT</span><span data-t="browser">Runs in the browser</span></div>
+</article>
+<p class="soon" data-t="soon">More tools will be added here as they are made.</p>
+</section>
+<section>
+<h2 data-t="how">How they're made</h2>
+<ul class="pr">
+<li><b data-t="p1">Free</b><span data-t="p1d">MIT licence. Use them for personal or commercial work.</span></li>
+<li><b data-t="p2">Private</b><span data-t="p2d">Your files stay on your computer. Nothing is uploaded or stored.</span></li>
+<li><b data-t="p3">Simple</b><span data-t="p3d">One task per tool, no sign-up, works on any desktop browser.</span></li>
+</ul>
+</section>
+<footer>
+<a href="https://haydamaka.com">haydamaka.com</a><a href="https://github.com/olya-haydamaka">GitHub</a><span class="sp"></span><span data-t="issues" data-html>Ideas or bugs? <a href="https://github.com/olya-haydamaka/postcard-fronts/issues">Open an issue</a></span>
+</footer>
+</div>
+<script>
+const L={en:{},uk:{name:'Оля Гайдамака',h1:'Відкриті інструменти <em>для митців</em>',lede:'Невеликі безкоштовні інструменти для практичного боку мистецтва: від підготовки принтів до передачі робіт у друкарню. Вони працюють у браузері, не потребують акаунта й ніколи не завантажують ваші роботи.',tools:'Інструменти',t1:'Листівки',open:'Відкрити',source:'Код',t1d:'Розміщуйте картини на лицьовому боці й звороті листівок, перевіряйте виліт, обріз і роздільність та експортуйте готові до друку TIFF 300 dpi для друкарні.',browser:'Працює в браузері',soon:'Нові інструменти з’являтимуться тут.',how:'Принципи',p1:'Безкоштовно',p1d:'Ліцензія MIT. Використовуйте для особистої чи комерційної роботи.',p2:'Приватно',p2d:'Файли лишаються на вашому комп’ютері. Нічого не завантажується й не зберігається.',p3:'Просто',p3d:'Одне завдання — один інструмент, без реєстрації, працює в будь-якому браузері на комп’ютері.',issues:'Ідеї чи помилки? <a href="https://github.com/olya-haydamaka/postcard-fronts/issues">Створіть issue</a>'}};
+document.querySelectorAll('[data-t]').forEach(e=>L.en[e.dataset.t]=e.innerHTML);
+function set(l){document.documentElement.lang=l;document.querySelectorAll('[data-t]').forEach(e=>{const v=L[l][e.dataset.t]??L.en[e.dataset.t];e.innerHTML=v});document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.l===l));try{localStorage.setItem('oh-lang',l)}catch(e){}}
+document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>set(b.dataset.l));
+let l0='en';try{l0=localStorage.getItem('oh-lang')||((navigator.language||'').startsWith('uk')?'uk':'en')}catch(e){}
+set(l0);
+</script>
+</body>
+</html>
